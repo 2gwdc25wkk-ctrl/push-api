@@ -1200,6 +1200,21 @@
             </li>
           </ol>
         </li>
+        <li>If |global| is a {{Window}} object:
+          <ol>
+            <li>Let |permissionState| be "`push`"'s [=permission state=].
+            </li>
+            <li>If |permissionState| is "`prompt`":
+              <ol>
+                <li>If |global| does not have [=transient activation=], return [=a promise rejected
+                with=] with a {{"NotAllowedError"}} {{DOMException}}.
+                </li>
+                <li>[=Consume user activation=] of |global|.
+                </li>
+              </ol>
+            </li>
+          </ol>
+        </li>
         <li>Run these steps [=in parallel=]:
           <ol>
             <li>Let |subscription| be null.
