@@ -1779,11 +1779,26 @@
                       given |notification|.
                     </p>
                   </li>
-                  <li>
+                  <li data-cite="appmanifest">
                     <p>
-                      If |appBadgeSet| is false, then <a href=
-                      "https://github.com/w3c/badging/issues/111">w3c/badging #111</a>...
+                      If |appBadgeSet| is false and the web application associated with the <a>push
+                      subscription</a> is an [=installed web application=]:
                     </p>
+                    <ol>
+                      <li>
+                        <p>
+                          Let |identity| be the web application's [=installed web
+                          application/identity=] [=/URL=].
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          [=Set the application badge for installed web application=] given
+                          |identity| and |declarativeResult|'s [=declarative push message parser
+                          result/app badge=].
+                        </p>
+                      </li>
+                    </ol>
                   </li>
                   <li>
                     <p>
