@@ -1443,8 +1443,7 @@
           PushSubscriptionJSON toJSON();
         };
         
-        dictionary PushSubscriptionKeys
-        {
+        dictionary PushSubscriptionKeys {
           USVString p256dh;
           USVString auth;
         };
@@ -1475,7 +1474,7 @@
         The <dfn>getKey</dfn><code>(|name:PushEncryptionKeyName|)</code> method retrieves keying
         material that can be used for encrypting and authenticating messages. The method steps are:
       </p>
-      <ol>
+      <ol class="algorithm">
         <li>Let |key| be a newly instantiated {{ArrayBuffer}} instance.
         </li>
         <li>If |name| is {{PushEncryptionKeyName/"p256dh"}}:
