@@ -1472,11 +1472,10 @@
         subscription</a>.
       </p>
       <p>
-        The <dfn>getKey</dfn><code>(|name:PushEncryptionKeyName|)</code> method retrieves keying
-        material that can be used for encrypting and authenticating messages. The method steps are:
+        The <dfn>getKey</dfn><code>(|name:PushEncryptionKeyName|)</code> method steps are:
       </p>
       <ol class="algorithm">
-        <li>Let |key| be a newly instantiated {{ArrayBuffer}} instance.
+        <li>Let |key| be a new {{ArrayBuffer}} object.
         </li>
         <li>If |name| is {{PushEncryptionKeyName/"p256dh"}}:
           <ol>
