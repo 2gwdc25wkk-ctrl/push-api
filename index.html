@@ -1206,8 +1206,9 @@
             </li>
             <li>If |permissionState| is "`prompt`":
               <ol>
-                <li>If |global| does not have [=transient activation=], return [=a promise rejected
-                with=] with a {{"NotAllowedError"}} {{DOMException}}.
+                <li>If |global| does not have [=transient activation=], then [=queue a global
+                task=] on the [=networking task source=] using |global| to [=reject=] |promise|
+                with a {{"NotAllowedError"}} {{DOMException}} and terminate these steps.
                 </li>
                 <li>[=Consume user activation=] of |global|.
                 </li>
